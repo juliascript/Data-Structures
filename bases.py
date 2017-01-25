@@ -12,6 +12,25 @@ def decode(str_num, base):
     assert 2 <= base <= 36
     # TODO: Decode number
 
+    if base == 10:
+        return int(str_num)
+    
+    if base < 10:
+        digits = list(str_num)
+        numInBaseTen = 0
+        length = digits.__len__()
+        powerOfBase = 0
+        for i in range(length, 0, -1):
+            digitRepresentation = int(math.pow(base, powerOfBase))
+            numInBaseTen += int(digits[i - 1]) * digitRepresentation
+            powerOfBase += 1
+        return numInBaseTen
+    # else:
+
+
+
+
+
 def encode(num, base):
     """
     Encode given number from base 10 to given base.
@@ -26,7 +45,6 @@ def encode(num, base):
         mod = num % base
         mod = int(mod)
         if mod > 9:
-            print letters[mod-10]
             mods.insert(0, letters[mod-10])
         else:
             mods.insert(0, "%d" % mod)
