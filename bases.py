@@ -114,7 +114,7 @@ def convert(str_num, base1, base2):
     assert 2 <= base2 <= 36
     # decode from initial base into base10
     numInBaseTen = decode(str_num, base1)
-    # encode base10 num into target base
+    # encode base10 num into target base 
     numInSpecifiedBase = encode(numInBaseTen, base2)
     return numInSpecifiedBase
 
