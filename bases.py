@@ -14,17 +14,24 @@ def decode(str_num, base):
     if base == 10:
         return int(str_num)
     
-    if base < 10:
-        digits = list(str_num)
-        numInBaseTen = 0
-        numOfDigits = digits.__len__()
-        power = 0
-        for i in range(numOfDigits, 0, -1):
-            digitRepresentation = int(math.pow(base, power))
-            numInBaseTen += int(digits[i - 1]) * digitRepresentation
-            power += 1
-        return numInBaseTen
-    # else:
+    digits = list(str_num)
+    numInBaseTen = 0
+    numOfDigits = digits.__len__()
+    power = 0
+
+    letters = list(string.ascii_lowercase)
+    for i in range(numOfDigits, 0, -1):
+        digitRepresentation = int(math.pow(base, power))
+        if digits[i - 1] in letters:
+            numInDigitSlot = int(letters.index(digits[i - 1]) + 10)
+        else: 
+            numInDigitSlot = int(digits[i - 1])
+        numInBaseTen += numInDigitSlot * digitRepresentation
+        power += 1
+
+    return numInBaseTen
+        
+
 
 
 
@@ -48,7 +55,7 @@ def encode(num, base):
             mod = num % base
             mod = int(mod)
             if mod > 9:
-                mods.insert(0, letters[mod-10])
+                mods.insert(0, letters[mod - 10])
             else:
                 mods.insert(0, "%d" % mod)
             num = int(math.floor(num / base))
