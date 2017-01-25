@@ -62,6 +62,9 @@ def convert(str_num, base1, base2):
     assert 2 <= base1 <= 36
     assert 2 <= base2 <= 36
     # TODO: Convert number
+    numInBaseTen = decode(str_num, base1)
+    numInSpecifiedBase = encode(numInBaseTen, base2)
+    return numInSpecifiedBase
 
 
 def main():
