@@ -83,15 +83,19 @@ def encode(num, base):
                 mods.insert(0, letters[mod - 10])
             else:
                 # remainder is between 0 and 9
+                # -- note: prepending because the power is increasing as num gets smaller
+                #           .. place values increase by the power raised to the base each step
                 mods.insert(0, "%d" % mod)
             # num is redefined as the dividend, rounded down (accounting for this through mods)
             # -- note: while loop will continue to run until num is no longer divisible by the base
             num = int(math.floor(num / base))
         # convert to an int
         num = int(num)
-        # 
+        # interpolate into string and prepend
+        # -- note: prepending because the power is increasing as num gets smaller
+        #           .. place values increase by the power raised to the base each step
         mods.insert(0, "%d" % num)
-        # return 
+        # return joined string of remainders, including the remainder that is now stored in num
         return string.join(mods, '')
     else: 
         # if the number is smaller than the base, meaning it can be represented in one place value
