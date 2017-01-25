@@ -10,7 +10,6 @@ def decode(str_num, base):
     base -- base of given number
     """
     assert 2 <= base <= 36
-    # TODO: Decode number
 
     if base == 10:
         return int(str_num)
@@ -38,21 +37,30 @@ def encode(num, base):
     base -- base to convert to
     """
     assert 2 <= base <= 36
-    # TODO: Encode number
+
+    if base == 10:
+        return str(num)
+
     letters = list(string.ascii_lowercase)
-    mods = []
-    while (num >= base):
-        mod = num % base
-        mod = int(mod)
-        if mod > 9:
-            mods.insert(0, letters[mod-10])
-        else:
-            mods.insert(0, "%d" % mod)
-        num = int(math.floor(num / base))
-    
-    num = int(num)
-    mods.insert(0, "%d" % num)
-    return string.join(mods, '')
+    if num > base:
+        mods = []
+        while (num >= base):
+            mod = num % base
+            mod = int(mod)
+            if mod > 9:
+                mods.insert(0, letters[mod-10])
+            else:
+                mods.insert(0, "%d" % mod)
+            num = int(math.floor(num / base))
+        
+        num = int(num)
+        mods.insert(0, "%d" % num)
+        return string.join(mods, '')
+    else: 
+        if num < 10:
+            return str(num)
+        else: 
+            return letters[num - 10]
 
 
 def convert(str_num, base1, base2):
@@ -61,7 +69,6 @@ def convert(str_num, base1, base2):
     """
     assert 2 <= base1 <= 36
     assert 2 <= base2 <= 36
-    # TODO: Convert number
     numInBaseTen = decode(str_num, base1)
     numInSpecifiedBase = encode(numInBaseTen, base2)
     return numInSpecifiedBase
