@@ -18,12 +18,12 @@ def decode(str_num, base):
     if base < 10:
         digits = list(str_num)
         numInBaseTen = 0
-        length = digits.__len__()
-        powerOfBase = 0
-        for i in range(length, 0, -1):
-            digitRepresentation = int(math.pow(base, powerOfBase))
+        numOfDigits = digits.__len__()
+        power = 0
+        for i in range(numOfDigits, 0, -1):
+            digitRepresentation = int(math.pow(base, power))
             numInBaseTen += int(digits[i - 1]) * digitRepresentation
-            powerOfBase += 1
+            power += 1
         return numInBaseTen
     # else:
 
