@@ -1,6 +1,6 @@
 #!python
 
-import string
+import string, math
 
 
 def decode(str_num, base):
@@ -20,6 +20,22 @@ def encode(num, base):
     """
     assert 2 <= base <= 36
     # TODO: Encode number
+    letters = list(string.ascii_lowercase)
+    mods = []
+    while (num >= base):
+        mod = num % base
+        mod = int(mod)
+        if mod > 9:
+            print letters[mod-10]
+            mods.insert(0, letters[mod-10])
+        else:
+            mods.insert(0, "%d" % mod)
+        num = int(math.floor(num / base))
+    
+    num = int(num)
+    mods.insert(0, "%d" % num)
+    return string.join(mods, '')
+
 
 def convert(str_num, base1, base2):
     """
