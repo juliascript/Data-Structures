@@ -17,7 +17,7 @@ def linear_search_iterative(array, item):
 
 
 def linear_search_recursive(array, item, index=0):
-    # theta(1), O(n)
+    # omega(1), O(n)
     if item == array[index]:
         return index
     else: 
@@ -38,7 +38,7 @@ def binary_search(array, item):
 
 
 def binary_search_iterative(array, item):
-    # theta(1), O(logn)
+    # omega(1), O(logn)
     lowerBound = 0
     upperBound = len(array)
 
@@ -58,7 +58,7 @@ def binary_search_iterative(array, item):
 
 
 def binary_search_recursive(array, item, left=None, right=None):
-    # theta(1), O(logn)
+    # omega(1), O(logn)
     if left == None:
         left = 0 
         right = len(array) - 1

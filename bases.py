@@ -4,6 +4,10 @@ import string, math
 
 
 def decode(str_num, base):
+    # getting the most significant information first, iterating from left to right 
+    #   has the advantage of getting the most important info 
+
+
     """
     Decode given number from given base to base 10.
     str_num -- string representation of number in given base
