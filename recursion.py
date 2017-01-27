@@ -9,12 +9,24 @@ def factorial(n):
     # implement factorial_iterative and factorial_recursive below, then
     # change this to call your implementation to verify it passes all tests
     # return factorial_iterative(n)
-    return factorial_recursive(n)
+    return factorial_iterative(n)
 
 
 def factorial_iterative(n):
-    # TODO: implement the factorial function iteratively here
-    pass
+    # theta(1), O(n) 
+    if type(n) == float:
+        raise ValueError, 'function undefined for float'
+    if n < 0:
+        raise ValueError, 'function undefined for n < 0'
+    elif n == 0:
+        return 1
+    elif n <= 2:
+        return n
+    else: 
+        total = 1
+        for i in range(int(n), 1, -1):
+            total *= i
+        return total
     # once implemented, change factorial (above) to call factorial_iterative
     # to verify that your iterative implementation passes all tests below
 
