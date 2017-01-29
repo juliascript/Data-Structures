@@ -1,7 +1,12 @@
 #!python
 
-import string
+import string, re
 
+def clean_text(text):
+    text = text.lower()
+    # text = re.sub(r"[.,!? 0-9]+", "", text)
+    text = re.sub(r"\W+", "", text)
+    return text
 
 def is_palindrome(text):
     """A string of characters is a palindrome if it reads the same forwards and
@@ -9,8 +14,9 @@ def is_palindrome(text):
     # implement is_palindrome_iterative and is_palindrome_recursive below, then
     # change this to call your implementation to verify it passes all tests
     assert isinstance(text, str)
-    # return is_palindrome_iterative(text)
-    return is_palindrome_recursive(text)
+    cleanedText = clean_text(text)
+    return is_palindrome_iterative(cleanedText)
+    # return is_palindrome_recursive(cleanedText)
 
 
 def is_palindrome_iterative(text):
@@ -32,7 +38,6 @@ def is_palindrome_iterative(text):
 
 def is_palindrome_recursive(text, left=None, right=None):
     # TODO: implement the is_palindrome function recursively here
-    print left, right
     if text == '':
         return True
 
