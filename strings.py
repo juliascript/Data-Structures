@@ -15,9 +15,19 @@ def is_palindrome(text):
 
 def is_palindrome_iterative(text):
     # TODO: implement the is_palindrome function iteratively here
-    pass
-    # once implemented, change is_palindrome to call is_palindrome_iterative
-    # to verify that your iterative implementation passes all tests
+    if text == '':
+        return True
+    lastIndex = len(text) - 1
+    halfOfString = len(text) // 2
+    for i in range(0, halfOfString):
+        if text[i] == text[lastIndex]:
+            # potential palindrome
+            lastIndex -= 1
+            continue
+        else: 
+            return False
+    return True
+
 
 
 def is_palindrome_recursive(text, left=None, right=None):
