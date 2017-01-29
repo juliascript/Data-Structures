@@ -8,6 +8,7 @@ def clean_text(text):
     text = re.sub(r"\W+", "", text)
     return text
 
+
 def is_palindrome(text):
     """A string of characters is a palindrome if it reads the same forwards and
     backwards, ignoring punctuation, whitespace, and letter casing"""
@@ -35,9 +36,8 @@ def is_palindrome_iterative(text):
     return True
 
 
-
 def is_palindrome_recursive(text, left=None, right=None):
-    # TODO: implement the is_palindrome function recursively here
+    # O(n/2)
     if text == '':
         return True
 
