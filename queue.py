@@ -1,10 +1,12 @@
 #!python
+from linkedlist import LinkedList
 
 class Queue(object):
 
     def __init__(self, iterable=None):
         """Initialize this queue and enqueue the given items, if any"""
-        self.data = []
+        # self.data = []
+        self.data = LinkedList()
         self.lengthOfQueue = 0
         if iterable:
             for item in iterable:
@@ -28,7 +30,8 @@ class Queue(object):
         if self.lengthOfQueue == 0:
             return None
         else: 
-            return self.data[0]
+            # return self.data[0]
+            return self.data.head.data
 
     def enqueue(self, item):
         """O(1) Enqueue the given item into this queue"""
@@ -41,7 +44,9 @@ class Queue(object):
         if self.lengthOfQueue == 0:
             raise ValueError, 'queue empty'
         else:
-            first = self.data[0]
-            del self.data[0]
+            # first = self.data[0]
+            # del self.data[0]
+            first = self.data.head.data
+            self.data.delete(first)
             self.lengthOfQueue -= 1
             return first
