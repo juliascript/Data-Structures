@@ -1,4 +1,4 @@
-#!python
+ #!python
 
 class Node(object):
 
@@ -15,9 +15,10 @@ class Node(object):
 class LinkedList(object):
 
     def __init__(self, iterable=None):
-        """Initialize this linked list and append the given items, if any"""
+        """O(n) Initialize this linked list and append the given items, if any"""
         self.head = None
         self.tail = None
+        self.lengthOfLL = 0
         if iterable:
             for item in iterable:
                 self.append(item)
@@ -40,16 +41,17 @@ class LinkedList(object):
         return self.head is None
 
     def length(self):
-        """Return the length of this linked list by traversing its nodes"""
-        node_count = 0
-        current = self.head  # Start at the head node
-        while current is not None:
-            node_count += 1  # Count this node
-            current = current.next  # Skip to the next node
-        return node_count
+        """O(1) Return the length of this linked list by traversing its nodes"""
+        # node_count = 0
+        # current = self.head  # Start at the head node
+        # while current is not None:
+        #     node_count += 1  # Count this node
+        #     current = current.next  # Skip to the next node
+        # return node_count
+        return self.lengthOfLL
 
     def append(self, item):
-        """Insert the given item at the tail of this linked list"""
+        """O(1) Insert the given item at the tail of this linked list"""
         new_node = Node(item)
         # Check if list is empty
         if self.head is None:
@@ -59,9 +61,10 @@ class LinkedList(object):
             self.tail.next = new_node
         # Update tail node
         self.tail = new_node
+        self.lengthOfLL += 1
 
     def prepend(self, item):
-        """Insert the given item at the head of this linked list"""
+        """O(1) Insert the given item at the head of this linked list"""
         new_node = Node(item)
         # Insert before head node
         new_node.next = self.head
@@ -70,9 +73,10 @@ class LinkedList(object):
         # Check if list was empty
         if self.tail is None:
             self.tail = new_node
+        self.lengthOfLL += 1
 
     def delete(self, item):
-        """Delete the given item from this linked list, or raise ValueError"""
+        """O(n) Delete the given item from this linked list, or raise ValueError"""
         current = self.head
         previous = None
         found = False
@@ -96,6 +100,7 @@ class LinkedList(object):
                 self.tail = previous
         else:
             raise ValueError('Item not found: {}'.format(item))
+        self.lengthOfLL -= 1
 
     def find(self, condition):
         """Return an item in this linked list satisfying the given condition"""

@@ -4,8 +4,8 @@ class Queue(object):
 
     def __init__(self, iterable=None):
         """Initialize this queue and enqueue the given items, if any"""
-        # TODO: initialize instance variables
-        pass
+        self.data = []
+        self.lengthOfQueue = 0
         if iterable:
             for item in iterable:
                 self.enqueue(item)
@@ -15,28 +15,33 @@ class Queue(object):
         return 'Queue({})'.format(self.length())
 
     def is_empty(self):
-        """Return True if this queue is empty, or False otherwise"""
-        # TODO: check if empty
-        pass
+        """O(1) Return True if this queue is empty, or False otherwise"""
+        return self.lengthOfQueue == 0
 
     def length(self):
-        """Return the number of items in this queue"""
-        # TODO: count number of items
-        pass
+        """O(1) Return the number of items in this queue"""
+        return self.lengthOfQueue
 
     def peek(self):
-        """Return the next item in this queue without removing it,
+        """O(1) Return the next item in this queue without removing it,
         or None if this queue is empty"""
-        # TODO: return next item, if any
-        pass
+        if self.lengthOfQueue == 0:
+            return None
+        else: 
+            return self.data[0]
 
     def enqueue(self, item):
-        """Enqueue the given item into this queue"""
-        # TODO: enqueue given item
-        pass
+        """O(1) Enqueue the given item into this queue"""
+        self.data.append(item)
+        self.lengthOfQueue += 1
 
     def dequeue(self):
-        """Return the next item and remove it from this queue,
+        """O(1) Return the next item and remove it from this queue,
         or raise ValueError if this queue is empty"""
-        # TODO: dequeue next item, if any
-        pass
+        if self.lengthOfQueue == 0:
+            raise ValueError, 'queue empty'
+        else:
+            first = self.data[0]
+            del self.data[0]
+            self.lengthOfQueue -= 1
+            return first
