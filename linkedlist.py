@@ -111,6 +111,9 @@ class LinkedList(object):
             current = current.next  # Skip to the next node
         return None
 
+    def __iter__(self):
+        return iter(self.as_list())
+
 
 if __name__ == '__main__':
     test_linked_list()
