@@ -56,6 +56,8 @@
 - compare [abstract data types][adt] and [concrete data structures][ds]
 - abstract data types: [list], [stack], [queue], [deque]
 - concrete data structures: [array], [dynamic array (resizable array, vector)][dynamic array], [linked list]
+
+**Resources:**
 - watch Make School's video lectures: [linked list][ms video linked list], [stack and queue][ms video stack queue]
 - play with interactive visualizations: [linked list, stack, queue, deque][visualgo list]
 
@@ -80,14 +82,16 @@
 [visualgo list]: https://visualgo.net/list
 
 
-### Class 5: Wednesday, February 1 – Set, Map, & Hash Table
+### Class 5: Wednesday, February 1 – Set, Map & Hash Table
 
 **Topics:**
 - abstract data types: [set], [multiset (bag)][multiset], [map (dictionary, associative array)][map]
 - concrete data structures: [hash table]
+- bonus abstract data type: [circular buffer]
+
+**Resources:**
 - watch Make School's video lecture: [hash table][ms video hash table]
 - play with interactive visualizations: [hash table][visualgo hash table]
-- bonus abstract data type: [circular buffer]
 
 **Challenges:**
 - implement set with hash table
@@ -110,6 +114,8 @@
 
 **Topics:**
 - [tree], [binary search tree], operations
+
+**Resources:**
 - watch Make School's video lecture: [tree][ms video tree]
 - play with interactive visualizations: [binary search tree][visualgo bst]
 
@@ -119,18 +125,26 @@
 - annotate functions with complexity analysis
 - stretch: implement binary search tree with singly linked list
 
+**Project:**
+- [trees and mazes] tutorial on Make School's [Online Academy]
+
 [tree]: https://en.wikipedia.org/wiki/Tree_%28data_structure%29
 [binary search tree]: https://en.wikipedia.org/wiki/Binary_search_tree
 [ms video tree]: https://www.youtube.com/watch?v=Yr3y78d2KYI
 [visualgo bst]: https://visualgo.net/bst
+
+[trees and mazes]: http://make.sc/oa-trees-and-mazes
+[Online Academy]: https://www.makeschool.com/academy
 
 
 ### Class 7: Monday, February 6 – Tree Traversals & Self-Balancing Trees
 
 **Topics:**
 - [tree traversals]: pre-order, post-order, in-order, level-order
-- watch Make School's video lecture: [tree traversals][ms video tree traversals]
 - [self-balancing trees] with [rotations]: [AVL tree], [splay tree], [red-black tree]
+
+**Resources:**
+- watch Make School's video lecture: [tree traversals][ms video tree traversals]
 
 **Challenges:**
 - implement iterative and recursive binary search tree traversals
@@ -167,6 +181,239 @@
 [quadtree]: https://en.wikipedia.org/wiki/Quadtree
 [octree]: https://en.wikipedia.org/wiki/Octree
 [k-d tree]: https://en.wikipedia.org/wiki/K-d_tree
+
+
+### Class 9: Friday, February 10 – Iterative Sorting Algorithms
+
+**Topics:**
+- iterative [comparison sorting]: [bubble], [selection], [insertion]
+- [integer sorting]: [counting], [bucket], [radix]
+
+**Resources:**
+- watch [animations] and [this video] of sorting algorithms to see patterns
+- play with step-by-step [interactive animations] of sorting algorithms
+
+**Challenges:**
+- implement bubble, selection, and insertion sorts
+- implement counting and bucket sorts
+- annotate functions with complexity analysis
+- stretch: implement insertion sort using binary search
+- stretch: implement [cocktail shaker] or [Shell] sort
+
+**Project:**
+- [sorting algorithms] with real-world data on Make School's [Online Academy]
+
+[comparison sorting]: https://en.wikipedia.org/wiki/Comparison_sort
+[bubble]: https://en.wikipedia.org/wiki/Bubble_sort
+[selection]: https://en.wikipedia.org/wiki/Selection_sort
+[insertion]: https://en.wikipedia.org/wiki/Insertion_sort
+
+[integer sorting]: https://en.wikipedia.org/wiki/Integer_sorting
+[counting]: https://en.wikipedia.org/wiki/Counting_sort
+[bucket]: https://en.wikipedia.org/wiki/Bucket_sort
+[radix]: https://en.wikipedia.org/wiki/Radix_sort
+[cocktail shaker]: https://en.wikipedia.org/wiki/Cocktail_shaker_sort
+[Shell]: https://en.wikipedia.org/wiki/Shellsort
+
+[animations]: https://www.toptal.com/developers/sorting-algorithms/
+[interactive animations]: https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
+[this video]: https://www.youtube.com/watch?v=jHPexHsDxwQ
+
+[sorting algorithms]: http://make.sc/oa-sorting-algorithms
+
+
+### Class 10: Monday, February 13 – Divide-and-Conquer Recursion
+
+**Topics:**
+- [divide-and-conquer]&nbsp;[recursion]: divide, conquer, combine
+- revisit [binary search] to see how it divides and conquers
+- [merge algorithm] and [merge sort]
+
+**Challenges:**
+- implement [merge sort] with a separate [merge algorithm]
+- implement [tree sort] with an appropriate [search tree]
+- annotate functions with complexity analysis
+- stretch: implement [radix sort][radix] for integers and/or strings
+
+**Project:**
+- continue [sorting algorithms] with real-world data
+
+[divide-and-conquer]: https://en.wikipedia.org/wiki/Divide_and_conquer_algorithm
+[recursion]: https://en.wikipedia.org/wiki/Recursion_(computer_science)
+[binary search]: https://en.wikipedia.org/wiki/Binary_search_algorithm
+[merge algorithm]: https://en.wikipedia.org/wiki/Merge_algorithm
+[merge sort]: https://en.wikipedia.org/wiki/Merge_sort
+[tree sort]: https://en.wikipedia.org/wiki/Tree_sort
+[search tree]: https://en.wikipedia.org/wiki/Search_tree
+
+
+### Class 11: Wednesday, February 15 – Recursive Sorting Algorithms
+
+**Topics:**
+- [recursive algorithm analysis] with trees, [recurrence relations], [master theorem]
+- partition algorithm and [quick sort]
+- [stable sorting] and [adaptive sorting]
+
+**Resources:**
+- watch these cute robot video animations: [quick sort][video quick sort], [merge sort vs. quick sort][video merge quick sort]
+
+**Challenges:**
+- implement stable quick sort with a separate partition algorithm
+- annotate functions with complexity analysis
+
+[recursive algorithm analysis]: AlgorithmAnalysisRecursive.pdf
+[recurrence relations]: https://en.wikipedia.org/wiki/Recurrence_relation
+[master theorem]: https://en.wikipedia.org/wiki/Master_theorem
+[quick sort]: https://en.wikipedia.org/wiki/Quicksort
+[stable sorting]: https://en.wikipedia.org/wiki/Sorting_algorithm#Stability
+[adaptive sorting]: https://en.wikipedia.org/wiki/Adaptive_sort
+[video quick sort]: https://www.youtube.com/watch?v=aXXWXz5rF64
+[video merge quick sort]: https://www.youtube.com/watch?v=es2T6KY45cA
+
+
+### Class 12: Friday, February 17 – Priority Queue & Heap
+
+**Topics:**
+- [priority queue] abstract data type
+- [heap] data structure, [binary heap] representations
+- [heap sort], compare to [insertion] and [selection] sort
+
+**Resources:**
+- watch Make School's [video lecture][ms video heap] and review [slides on heaps][ms slides heap]
+- watch this cute robot video animation: [heap and heap sort][video heap sort]
+- play with interactive visualizations: [heap][visualgo heap]
+- read about [sorting algorithms implemented with priority queue][priority queue sorting]
+
+**Challenges:**
+- implement binary min heap with dynamic array using [starter code](heap.py) and [unit tests](test_heap.py)
+- implement heap sort with binary heap
+- implement priority queue with binary heap
+- implement priority queue with binary search tree
+- annotate functions with complexity analysis
+- stretch: implement stack with priority queue
+- stretch: generalize binary heap with min or max initialization option
+
+[priority queue]: https://en.wikipedia.org/wiki/Priority_queue
+[heap]: https://en.wikipedia.org/wiki/Heap_(data_structure)
+[binary heap]: https://en.wikipedia.org/wiki/Binary_heap
+[heap sort]: https://en.wikipedia.org/wiki/Heapsort
+
+[ms slides heap]: Heaps.pdf
+[ms video heap]: https://www.youtube.com/watch?v=eBGgEEXnbuk
+[video heap sort]: https://www.youtube.com/watch?v=H5kAcmGOn4Q
+[visualgo heap]: https://visualgo.net/heap
+[priority queue sorting]: https://en.wikipedia.org/wiki/Priority_queue#Equivalence_of_priority_queues_and_sorting_algorithms
+
+
+### Class 13: Wednesday, February 22 – Graphs
+
+**Topics:**
+- [graph abstract data type][graph adt]
+- [graph types]: [directed]/undirected, weighted/unweighted, simple/[multigraph]
+- [graph applications]: computer networking, social networking, airplane flight routing, map routing, search engines ([PageRank]), dependency planning, etc.
+- [graph representations]: object references, edge list, [incidence matrix], [adjacency matrix], [adjacency list], adjacency map
+
+**Resources:**
+- play with interactive visualizations: [graph types and representations][visualgo graph]
+
+**Project:**
+- collect data set of social network, airplane routes, or your choice
+- implement graph with appropriate representation for that data set
+
+[graph adt]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+[graph types]: https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Types_of_graphs
+[directed]: https://en.wikipedia.org/wiki/Directed_graph
+[multigraph]: https://en.wikipedia.org/wiki/Multigraph
+[graph applications]: https://en.wikipedia.org/wiki/Graph_theory#Applications
+[PageRank]: https://en.wikipedia.org/wiki/PageRank
+[graph representations]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)#Representations
+[incidence matrix]: https://en.wikipedia.org/wiki/Incidence_matrix
+[adjacency matrix]: https://en.wikipedia.org/wiki/Adjacency_matrix
+[adjacency list]: https://en.wikipedia.org/wiki/Adjacency_list
+[graph traversals]: https://en.wikipedia.org/wiki/Graph_traversal
+[depth-first search]: https://en.wikipedia.org/wiki/Depth-first_search
+[breadth-first search]: https://en.wikipedia.org/wiki/Breadth-first_search
+
+[visualgo graph]: https://visualgo.net/graphds
+
+
+### Class 14: Friday, February 24 – Graph Traversals & Spanning Trees
+
+**Topics:**
+- [graph traversals]: [depth-first search], [breadth-first search]
+- graph [connectivity], [connected components], [strongly connected components]
+- graph [spanning trees], [minimum spanning trees]:
+    - [Prim's algorithm]
+    - [Kruskal's algorithm]
+- bonus data structure: [trie (prefix/radix tree)][trie]
+
+**Resources:**
+- play with interactive visualizations: [graph traversals][visualgo traversals], [minimum spanning tree][visualgo mst]
+
+**Graph Project:**
+- implement graph traversals: depth-first search, breadth-first search
+- implement an algorithm to find connected components on your graph data set
+- implement an algorithm to find a minimum spanning tree on your graph data set
+- annotate functions with complexity analysis
+
+**Trie Project:**
+- implement trie with insert and prefix search operations
+- revisit [phone call routing] scenarios 3, 4, and 5 with trie
+- annotate functions with complexity analysis
+
+[connectivity]: https://en.wikipedia.org/wiki/Connectivity_(graph_theory)
+[connected components]: https://en.wikipedia.org/wiki/Connected_component_(graph_theory)
+[strongly connected components]: https://en.wikipedia.org/wiki/Strongly_connected_component
+[disjoint-set]: https://en.wikipedia.org/wiki/Disjoint-set_data_structure
+[spanning trees]: https://en.wikipedia.org/wiki/Spanning_tree
+[minimum spanning trees]: https://en.wikipedia.org/wiki/Minimum_spanning_tree
+[Prim's algorithm]: https://en.wikipedia.org/wiki/Prim%27s_algorithm
+[Kruskal's algorithm]: https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
+
+[visualgo traversals]: https://visualgo.net/dfsbfs
+[visualgo mst]: https://visualgo.net/mst
+
+[trie]: https://en.wikipedia.org/wiki/Trie
+[phone call routing]: http://make.sc/db-phone-call-routing
+
+
+### Class 15: Monday, February 27 – Graph Algorithms
+
+**Topics:**
+- [shortest path problem]:
+    - [A* search algorithm]
+    - [Dijkstra's algorithm]
+    - [Bellman–Ford algorithm]
+    - [Floyd–Warshall algorithm]
+- [maximum flow problem]:
+    - [Ford–Fulkerson algorithm]
+    - [Edmonds–Karp algorithm]
+    - [max-flow min-cut theorem]
+- [matching problem], [assignment problem]
+
+**Resources:**
+- play with interactive visualizations: [shortest path][visualgo shortest path], [max flow][visualgo max flow], [matching][visualgo matching]
+
+**Graph Project:**
+- implement an algorithm to find a shortest path or maximum flow on your graph data set
+- annotate functions with complexity analysis
+
+[shortest path problem]: https://en.wikipedia.org/wiki/Shortest_path_problem
+[A* search algorithm]: https://en.wikipedia.org/wiki/A*_search_algorithm
+[Dijkstra's algorithm]: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+[Bellman–Ford algorithm]: https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
+[Floyd–Warshall algorithm]: https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
+
+[maximum flow problem]: https://en.wikipedia.org/wiki/Maximum_flow_problem
+[Ford–Fulkerson algorithm]: https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm
+[Edmonds–Karp algorithm]: https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm
+[max-flow min-cut theorem]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
+[matching problem]: https://en.wikipedia.org/wiki/Matching_(graph_theory)
+[assignment problem]: https://en.wikipedia.org/wiki/Assignment_problem
+
+[visualgo shortest path]: https://visualgo.net/sssp
+[visualgo max flow]: https://visualgo.net/maxflow
+[visualgo matching]: https://visualgo.net/matching
 
 
 ## Working with this GitHub repository
